@@ -24,6 +24,8 @@ do not combine a new feature with a formatting cleanup).
 
 After every commit, run the project's validation commands and show a short
 pass/fail summary. Do not proceed to the next commit if validations fail.
+If validations fail and you cannot resolve the issue, stop and ask the
+human. Do not attempt workarounds that drift from the original task.
 
 Typical validation pattern:
 
@@ -51,6 +53,13 @@ drift, and silent failure:
    the project does not do and where it may fail.
 
 These are non-negotiable. A skill that omits any of them is incomplete.
+
+## Scope freeze
+
+If the task declaration includes scope constraints (e.g., "no new deps",
+"no logic changes", "patch only"), treat them as absolute. Do not add
+nice-to-have improvements, refactors, or bonus features that fall outside
+the declared scope. When in doubt, ask.
 
 ## Release authority
 

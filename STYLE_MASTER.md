@@ -15,6 +15,10 @@ contradict them.
   if evidence is missing, say "evidence missing".
 - No emojis. No motivational fluff. No vague abstractions without evidence.
 - All repo content (README, docs, code comments) must be English.
+  Chat reports to the human may be in Chinese (or whatever the human
+  uses), but every file committed to the repo must be English.
+- Keep master files short (target: under 150 lines). If a section
+  grows past that, move the excess into a template or example file.
 
 ## Canonical samples
 
