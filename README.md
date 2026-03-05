@@ -1,5 +1,7 @@
 # skills-of-skills
 
+<!-- CI smoke. -->
+
 A minimal "skills' skill" mother repo that manages project-specific AI agent
 skills through progressive disclosure: master rules at the top, a reusable
 template in the middle, and concrete project skills at the bottom.
