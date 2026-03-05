@@ -61,6 +61,30 @@ If the task declaration includes scope constraints (e.g., "no new deps",
 nice-to-have improvements, refactors, or bonus features that fall outside
 the declared scope. When in doubt, ask.
 
+## Repository safety baseline (default)
+
+These are the default repo-level guardrails for all projects unless
+explicitly overridden.
+
+- **Protected `main`:** `main` should be protected. Direct pushes to
+  `main` are avoided.
+- **Required checks:** `main` should require at least one CI check
+  before merging. Minimal CI is acceptable: `compileall` + `unittest`
+  (+ one smoke command if applicable).
+- **No approvals requirement for solo maintainers:** do **not** require
+  review approvals when the repo is maintained by a single person
+  (avoids deadlocks).
+- **Agent authority (implementation only):** agents may create branches,
+  commit, run validations, and push non-protected branches (e.g.,
+  `release/*`, `chore/*`) after final validations pass. Agents may
+  draft PR / release text, but do not perform merge/tag/release actions.
+- **Human authority (integration & release):** the human maintainer
+  opens PRs (if needed), merges to `main`, tags versions, and publishes
+  GitHub Releases.
+
+If a repository currently lacks CI, add a minimal workflow, trigger it
+once, then enable "required checks" in branch protection.
+
 ## Release authority
 
 This policy is fixed and applies to all projects referencing this master:
