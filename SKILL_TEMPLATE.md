@@ -2,6 +2,8 @@
 
 Inherits: **STYLE_MASTER.md**, **PROJECT_MASTER.md**
 
+Repo baseline assumed: protected `main` + required CI checks; agents push branches, humans merge/tag/release.
+
 > Replace bracketed placeholders with project-specific content.
 > Delete this instruction block before committing.
 
